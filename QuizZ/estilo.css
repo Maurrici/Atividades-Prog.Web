@@ -1,0 +1,134 @@
+/* Classes */
+.quest01{
+    background: url('images/quest1.png') no-repeat center #05162B;
+}
+
+.quest02{
+    background: url('images/quest2.png') no-repeat center #05162B;
+}
+
+.quest03{
+    background: url('images/quest3.png') no-repeat center #05162B;
+}
+
+.quest04{
+    background: url('images/quest4.png') no-repeat center #05162B;
+}
+
+.conteudo{
+    margin: auto;
+    width: 1000;
+    height: 500;
+    color: #05162B;
+    border: 2px solid rgb(247, 118, 13);
+    padding: 10px 5% 0 5%;
+    font-size: 2em;
+    text-shadow: 2px 2px rgb(155, 106, 28);
+    position: relative;
+}
+        
+.centralizar{
+    width: 100%;
+    text-align: center;
+}
+
+.textbox{
+    width: 400;
+    height: 70;
+    font-size: 40px;
+    margin: 0 30%;
+    margin-top: 10%;
+    border-radius: 10px;
+    border: 3px solid rgb(152, 77, 17);
+    background-color: #05162B;
+    color: rgb(155, 106, 28);
+
+}
+
+.selecao{
+    width:  50%;
+    height: 10%;
+    font-size: 32px;
+    background: #05162B;
+    color: rgb(155, 106, 28);
+    margin: 10% 22% 5% 22%;
+}
+
+.botao{
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: rgb(155, 106, 28);
+    border: 3px solid rgb(152, 77, 17);
+    background-color: #05162B;
+    position: absolute;
+    top: 400;
+    right: 300;
+}
+
+.botao:hover{
+    cursor: pointer;
+}
+
+.input[type="radio"]:hover{
+    cursor: pointer;
+}
+
+.esferas{
+    width: 550px;
+    height: 300px;
+    margin: auto;
+}
+
+.label-esferas{
+    display: inline-block;
+    width: 100;
+}
+
+.input-esferas{
+    visibility: hidden;
+}
+
+.label-esferas:hover{
+    cursor: pointer;
+}
+
+.input-esferas:checked+label{
+    border: 2px solid #05162B;
+}
+
+.vouf{
+    margin-left: 50px;
+    margin-top: 60px;
+}
+
+.right{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.left{
+    margin-right: 25%;
+}
+
+/* Tags */
+body{
+    background: #05162B;
+}
+
+h3{
+    padding: 0 50px;
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+form{
+    margin: 0;
+}
+
+kbd{
+    font-size: 0.8em;
+}
