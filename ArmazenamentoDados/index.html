@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Armazenamento de Dados</title>
+    <style>
+        body{
+            background: #77e5e4;
+            color: #285885;
+            font-family: 'Ubuntu', sans-serif;
+            padding: 50px 0 0 0;
+        }
+
+        h1{
+            margin-bottom: 0;
+        }
+
+        h2{
+            margin-top: 0;
+            font-weight: normal;
+            font-size: medium;
+            text-align: center;
+        }
+
+        h4{
+            margin-top: 10px;
+        }
+
+        caption{
+            color: #285885;
+        }
+
+        .table-bordered td, .table-bordered th{
+            border: 2px solid #285885;
+            color: #285885;
+        }
+
+        .table thead th{
+            border: 2px solid #285885;
+        }
+
+        .table{
+            background-color: #28588579;
+        }
+
+        .table thead th{
+            width: 200px;
+        }
+
+        .table tbody td{
+            width: 300px;
+            height: 60px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .check{
+            text-align: center;
+            line-height: 20px;
+        }
+
+        .box-cod{
+            border: 2px solid #fff;
+            margin: 0 50px;
+            padding: 50px;
+            border-radius: 5px;
+        }
+
+        section#codigos{
+            background: #285885;
+            color: #77e5e4;
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        section#codigos h3.h3, section#codigos h4.h4{
+            font-weight: 0;
+        }
+
+        nav button.btn{
+            width: 24%;
+        }
+
+        nav{
+            margin: 0 50px 0 73px;
+        }
+
+        .btn-primary:not(:disabled):not(.disabled).active{
+            border: 2px solid #fff;
+            border-bottom: none;
+        }
+
+    </style>
+</head>
+    <body>
+        <h1 class="display-4 text-center">Armazenamento de Dados na WEB</h1>
+        <h2>Essa página contém algumas informações sobre formas de armazenar dados na Web e trechos de códigos de como utiliza-las.</h2>
+        <p class="text-center m-4"><i class="fas fa-dragon fa-5x"></i></p>
+
+        <section id="atributos" class="container">
+            <h3>Características</h3>
+            <div class="table-responsive mt-4 mx-auto">
+                <table class="table table-bordered">
+                    <caption>Tabela com Características. O <i class="fas fa-times"></i> indica que a forma de armazenamento possui a característica.</caption>
+                    <thead>
+                        <tr class="text-center">
+                            <th>Características/Tipos</th>
+                            <th>Cookies</th>
+                            <th>Sessions</th>
+                            <th>Query strings</th>
+                            <th>input type="hidden"</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vísivel na URL</td>
+                            <td></td>
+                            <td></td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Armazena no Código</td>
+                            <td></td>
+                            <td></td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Armazena no Browser</td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Armazena no Server</td>
+                            <td></td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Envia Dados ao Server</td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Possui Tempo de Expiração</td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Disponibilidade Somente na Janela</td>
+                            <td></td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Persistência de Dados</td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Alta Capacidade de Armazenamento</td>
+                            <td></td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Disponível a Todas as Páginas do Browser</td>
+                            <td></td>
+                            <td class="check"><i class="fas fa-times fa-3x"></i></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="codigos">
+            <div class="container">
+                <h3 class="h3">Trechos de Códigos</h3>
+                <div class="mt-3">
+                    <nav>
+                        <button id="btn1" class="btn btn-lg btn-primary">Cookies</button>
+                        <button id="btn2" class="btn btn-lg btn-primary">Sessions</button>
+                        <button id="btn3" class="btn btn-lg btn-primary">Query String</button>
+                        <button id="btn4" class="btn btn-lg btn-primary">input type="hidden"</button>
+                    </nav>
+
+                    <div id="1" class="box-cod d-none">
+
+                        <h4><i class="fas fa-terminal"></i> Armazenar Dados</h4>
+                        <div>
+                            <p class="ml-5">No código a seguir armazenamos no cookie o valor "Maurício" com a chave "name".</p>
+                            <p class="text-center text-light">setcookie("name", "Maurício");</p>
+                        </div>
+                        <h4><i class="fas fa-terminal"></i> Recuperar Dados</h4>
+                        <div>
+                            <p class="ml-5">No código a seguir iremos recuperar o cookie do exemplo anterior.</p>
+                            <p class="text-center text-light">$variavel = $_COOKIE["name"];</p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Excluir Dados</h4>
+                        <div>
+                            <p class="ml-5">Para excluir, basta criar o cookie passando um valor de 1 hora atrás.</p>
+                            <p class="text-center text-light">setcookie("name", "", time() - 3600);</p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Verificar Existência de Dados</h4>
+                        <div>
+                            <p class="ml-5">Podemos verificar a existência de Cookies utilizando a função count com um if.</p>
+                            <p class="text-center text-light">if(count($_COOKIE) > 0) echo 'Existe Cookie';</p>
+                        </div>
+
+                    </div>
+
+                    <div id="2" class="box-cod d-none">
+                
+                        <h4><i class="fas fa-terminal"></i> Armazenar Dados</h4>
+                        <div>
+                            <p class="ml-5">Para iniciar devemos iniciar a session antes da tag HTML, sempre que usarmos a Sessions.</p>
+                            <p class="text-center text-light"> 	&lt;? php session_start(); ?&gt; </p>
+                            <p class="ml-5">Segue o exemplo do armazenamento do valor "Maurício" na chave "name".</p>
+                            <p class="text-center text-light"> 	$_SESSION["name"] = "Maurício"; </p>
+                        </div>
+                        <h4><i class="fas fa-terminal"></i> Recuperar Dados</h4>
+                        <div>
+                            <p class="ml-5">No código a seguir iremos recuperar o valor do exemplo anterior.</p>
+                            <p class="text-center text-light">$variavel = $_SESSION["name"];</p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Excluir Dados</h4>
+                        <div>
+                            <p class="ml-5">Para excluir os dados da session basta utilizar as funções:</p>
+                            <p class="text-center text-light">// Remove todas as variáveis <br>
+                                session_unset(); <br>
+                                
+                                // Destrói a sessão <br>
+                                session_destroy();
+                            </p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Verificar Existência de Dados</h4>
+                        <div>
+                            <p class="ml-5">Podemos verificar a existência de Sessions utilizando o código a seguir:</p>
+                            <p class="text-center text-light">if (isset($_COOKIE["sessionId"])) echo 'Há uma sessão';</p>
+                            <p class="ml-5">Para armazenar o Id após a criação(session_start) da seção utilize esse código:</p>
+                            <p class="text-center text-light">$_SESSION['id'] = session_id();</p>
+                        </div>
+
+                    </div>
+
+                    <div id="3" class="box-cod d-none">
+                        
+                        <h4><i class="fas fa-terminal"></i> Armazenar Dados</h4>
+                        <div>
+                            <p class="ml-5">No código a seguir armazenamos o valor "Maurício" com a chave "name".</p>
+                            <p class="text-center text-light">&lt;a href='arquivo.php?name=Mauricio'&gt;Envie seu nome&lt;/a&gt;</p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Recuperar Dados</h4>
+                        <div>
+                            <p class="ml-5">Como as Query Strings passam informações via URL pegamos os dados de lá.</p>
+                            <p class="text-center text-light">$variavel = $_GET["name"];</p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Excluir Dados</h4>
+                        <div>
+                            <p class="ml-5">Como o dado se encontra na URL se não utilizarmos ou repassa-lo para a próxima página
+                                e serão excluídos, pois são variáveis de código.
+                            </p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Verificar Existência de Dados</h4>
+                        <div>
+                            <p class="ml-5">Podemos verificar a existência de Dados na URl utilizando a função count com um if.</p>
+                            <p class="text-center text-light">if(count($_GET) > 0) echo 'Existe Dados na URL';</p>
+                        </div>
+
+                    </div>
+
+                    <div id="4" class="box-cod d-none">
+                        
+                        <h4><i class="fas fa-terminal"></i> Armazenar Dados</h4>
+                        <div>
+                            <p class="ml-5">No código a seguir armazenamos o valor "Maurício" com a chave "name".</p>
+                            <p class="text-center text-light">&lt;input type="hidden" name="name" value="&gt;?php echo $_GET["name"]; ?&lt;"&gt;Envie seu nome&lt;/a&gt;</p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Recuperar Dados</h4>
+                        <div>
+                            <p class="ml-5">A recuperação se dar da mesma maneira das Query Strings.</p>
+                            <p class="text-center text-light">$variavel = $_GET["name"];</p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Excluir Dados</h4>
+                        <div>
+                            <p class="ml-5">Como o dado se encontra na URL se não utilizarmos ou repassa-lo para a próxima página
+                                e serão excluídos, pois são variáveis de código.
+                            </p>
+                        </div>
+
+                        <h4><i class="fas fa-terminal"></i> Verificar Existência de Dados</h4>
+                        <div>
+                            <p class="ml-5">Podemos verificar a existência de Dados na URl utilizando a função count com um if.</p>
+                            <p class="text-center text-light">if(count($_GET) > 0) echo 'Existe Dados na URL';</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            
+        </section>
+
+        <script src="nav-trechos.js"></script>
+    </body>
+</html>
